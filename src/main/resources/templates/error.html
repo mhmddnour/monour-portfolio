@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{/layout}">
+<head>
+    <title>Error</title>
+</head>
+
+<body>
+
+<div layout:fragment="content">
+  <section class="my-5">
+	  	<table>
+			    <tr>
+			        <td>Date</td>
+			        <td th:text="${timestamp}"/>
+			    </tr>
+			    <tr>
+			        <td>Path</td>
+			        <td th:text="${path}"/>
+			    </tr>
+			    <tr>
+			        <td>Error</td>
+			        <td th:text="${error}"/>
+			    </tr>
+			    <tr>
+			        <td>Status</td>
+			        <td th:text="${status}"/>
+			    </tr>
+			    <tr>
+			        <td>Message</td>
+			        <td th:text="${message}"/>
+			    </tr>
+			    <tr>
+			        <td>Exception</td>
+			        <td th:text="${exception}"/>
+			    </tr>
+			    <tr>
+			        <td>Trace</td>
+			        <td>
+			            <pre th:text="${trace}"></pre>
+			        </td>
+			    </tr>
+	</table>
+  </section>
+</div>
+
+
+<th:block th:fragment="optional">
+  	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+</th:block>
+
+</body>
+
+
+</html>
+

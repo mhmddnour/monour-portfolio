@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title layout:title-pattern="'$CONTENT_TITLE - $LAYOUT_TITLE'"></title>
+    <!--===============================================================================================-->
+    <!-- Bootstrap CSS -->
+    <link th:rel="preconnect" th:href="@{'https://fonts.gstatic.com'}" th:crossorigin="crossorigin"/>
+    <link th:rel="preload" as="style" th:href="@{'https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700;800&amp;display=swap'}"/>
+    <link th:rel="stylesheet" th:href="@{'https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700;800&amp;display=swap'}" media="print" th:onload="'this.media='all''"/>
+    <!--===============================================================================================-->
+    <noscript>
+        <link th:rel="stylesheet" th:href="@{'https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700;800&amp;display=swap'}"/>
+    </noscript>
+
+    <link th:href="@{'/css/bootstrap-icons/bootstrap-icons.css?var=1.2.0'}" th:rel="stylesheet">
+<!--    <link th:href="@{'../static/css/font-awesome/css/all.min.css?ver=1.2.0'}" rel="stylesheet">-->
+    <link th:href="@{'/css/bootstrap-icons/bootstrap-icons.css?ver=1.2.0'}" th:rel="stylesheet">
+    <link th:href="@{'/css/bootstrap.min.css?ver=1.2.0'}" th:rel="stylesheet">
+    <link th:href="@{'/css/aos.css?ver=1.2.0'}" th:rel="stylesheet">
+    <link th:href="@{'/css/main.css?ver=1.2.0'}" th:rel="stylesheet">
+
+    <noscript>
+        <style type="text/css">
+            [data-aos] {
+                opacity: 1 !important;
+                transform: translate(0) scale(1) !important;
+            }
+        </style>
+    </noscript>
+
+</head>
+
+<body id="top">
+
+<!-- Main Navigation -->
+<!-- Nav Bar -->
+<header class="bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="header-nav" role="navigation">
+        <div class="container"><a class="link-dark navbar-brand site-title mb-0" th:href="@{/landing}">Be In Touch</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto me-2">
+                    <li class="nav-item"><a class="nav-link" th:href="@{#about}">About</a></li>
+                    <li class="nav-item"><a class="nav-link" th:href="@{#services}">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" th:href="@{#skills}">Skills</a></li>
+                    <!--              <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>-->
+                    <li class="nav-item"><a class="nav-link" th:href="@{#experience}">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" th:href="@{#contact}">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+    <!-- Content Section -->
+<section layout:fragment="content">
+    <p>This is filled by the content template.</p>
+</section>
+
+    <!-- Footer -->
+<footer class="pt-4 pb-4 text-center bg-light">
+    <div class="container"> <!-- start div container -->
+
+        <div class="my-3">
+            <div class="h4">Mohamed Nour</div>
+            <p>Integration & Middleware Developer</p>
+            <div class="social-nav">
+                <nav role="navigation">
+                    <ul class="nav justify-content-center">
+                        <li class="nav-item"><a class="nav-link" th:href="@{'https://twitter.com/Mhmdnourr7'}" title="Twitter"><i class="fab fa-twitter"></i><span class="menu-title sr-only">Twitter</span></a></li>
+                        <!--<li class="nav-item"><a class="nav-link" href="https://www.facebook.com/templateflip" title="Facebook"><i class="fab fa-facebook"></i><span class="menu-title sr-only">Facebook</span></a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://www.instagram.com/templateflip" title="Instagram"><i class="fab fa-instagram"></i><span class="menu-title sr-only">Instagram</span></a></li>-->
+                        <li class="nav-item"><a class="nav-link" th:href="@{'https://www.linkedin.com/in/mohamed-nour-kasem-31b06714a/'}" title="LinkedIn"><i class="fab fa-linkedin"></i><span class="menu-title sr-only">LinkedIn</span></a></li>
+                        <!--<li class="nav-item"><a class="nav-link" href="https://www.behance.net/templateflip" title="Behance"><i class="fab fa-behance"></i><span class="menu-title sr-only">Behance</span></a></li>-->
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div class="text-small text-secondary">
+            <div class="mb-1">&copy; monour. All rights reserved.</div>
+            <div>
+                <!-- Make sure to buy a license for the template before removing the line below.
+                Buy license on https://templateflip.com/ -->
+                Design - <a th:href="@{'https://templateflip.com/'}" target="_blank">TemplateFlip</a>
+            </div>
+        </div>
+
+    </div> <!-- end div container -->
+</footer>
+
+<!-- Optional Section -->
+<th:block layout:fragment="optional">
+    <div id="scrolltop">
+        <a class="btn btn-secondary" href="#top">
+            <span class="icon">
+                <i class="fas fa-angle-up fa-x"></i>
+            </span>
+        </a>
+    </div>
+    <script th:src="@{'/scripts/imagesloaded.pkgd.min.js?ver=1.2.0'}"></script>
+    <script th:src="@{'/scripts/masonry.pkgd.min.js?ver=1.2.0'}"></script>
+    <script th:src="@{'/scripts/BigPicture.min.js?ver=1.2.0'}"></script>
+    <script th:src="@{'/scripts/purecounter.min.js?ver=1.2.0'}"></script>
+    <script th:src="@{'/scripts/bootstrap.bundle.min.js?ver=1.2.0'}"></script>
+    <script th:src="@{'/scripts/aos.min.js?ver=1.2.0'}"></script>
+    <script th:src="@{'/scripts/main.js?ver=1.2.0'}"></script>
+</th:block>
+
+</body>
+
+</html>
